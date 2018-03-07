@@ -20,16 +20,15 @@ Built-in function in the OS module is used to generate the file names in a direc
 ###### Python Platform module:
 It is used to detect the Operating system info (Windows or Linux). In Linux OS information is stored in /sys directory for windows 7 C:\Windows\System32\license.rtf and EULA code for windows 10 
 
-
 #### Building Max_10Size.py
 ``` Python 2.x (Python 2.7 preferred)``` 
 In Terminal/Command Prompt move to the directory of Max_10Size.py and run the following command.
 ``` python Max_10Size.py ```
 
 ###### Remarks:
-Currently by defualt for windows all drives and for linux root directory will be searched, User can change the location in the code by removing the commented block as specified inside the Max_10Size.py (It will take approx. 10-15 minutes depending upon the system to search whole computer)
-Program while running show the folders currently being searched and total files searched at the end.
-
+1. Currently by defualt for windows all drives and for linux root directory will be searched, User can change the location in the code by removing the commented block as specified inside the Max_10Size.py (It will take approx. 10-15 minutes depending upon the system to search whole computer)
+2. Program while running show the folders currently being searched and total files searched at the end.
+3. If whole computer is searched /dev/core ( symbolic link to the regular file) in linux and C:\pagefile.sys ( least-used files in RAM are 'paged' out to this file.) in windows may be the largest file because of its enormous size
  
  ### Problem 2
 ``` Extension.py ``` will sort the files on Desktop on the basis of file extension and move them in separate folders in Documents folder Hence desktop is cleaned but shortcut ("lnk") inside the Public Desktop folder (C:\Users\Public\Public Desktop) is not moved irrespective of the user login as the recuirement was not to remove shortcuts of My Computer, Chrome or even Counter strike like applications. 
